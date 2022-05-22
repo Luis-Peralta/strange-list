@@ -1,3 +1,4 @@
+# branch develop
 # Serenity JUnit Starter project
 
 This is the simplest possible build script setup for Serenity BDD using Java and JUnit. 
