@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  app:
+    image: strange-list:1.0
+    volumes:
+      - "${HOME}/.m2:/root/.m2"

@@ -45,10 +45,6 @@ public class UserActions extends ScenarioActor {
     @Step("#actor validates that the item exists and validates its description and image correctly.")
     public void validate_description_and_image(String description, String image) {
         assertEquals(createItem.obtain_description_item(description), description);
-        System.out.print("----------------------");
-        System.out.println(createItem.obtain_description_item(description));
         assertThat(createItem.obtain_path_image(description), containsString(image));
-        System.out.print("----------------------");
-        System.out.print(createItem.obtain_path_image(description));
     }
 }
