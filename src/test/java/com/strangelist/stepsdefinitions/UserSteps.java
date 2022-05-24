@@ -90,12 +90,13 @@ public class UserSteps {
      */
 
     @Given("^(.+) select random item$")
-    public void user_select_random_item(String actor) {
-
+    public void user_select_item(String actor) {
+        //nothing...
     }
 
-    @Then("^(.+) check the length of the item correctly$")
-    public void user_check_length_of_item(String actor) {
+    @Then("^(.+) check the length of (.+) of the item correctly$")
+    public void user_check_length_of_item(String actor, String description) {
+        user.validate_length_description(description);
     }
 
 
@@ -103,14 +104,14 @@ public class UserSteps {
      * TC-05 - Check if exist in the list the item with text “Creators: Matt Duffer, Ross Duffer”
      *
      */
-
     @Given("^(.+) search the item$")
     public void user_search_item(String actor) {
-
+        //nothing...
     }
 
-    @Then("^(.+) verify that the description is correct$")
-    public void user_verify_description(String actor) {
+    @Then("^(.+) verify that the (.+) is correct$")
+    public void user_verify_description(String actor, String description) {
+        user.validate_exist_description(description);
     }
 
 }

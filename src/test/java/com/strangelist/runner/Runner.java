@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
     features = "src/test/resources/features",
     glue = "com.strangelist.stepsdefinitions",
     monochrome = true,
-    tags = "@createanddelete"
+    tags = "@TC-05"
 )
 public class Runner {
 

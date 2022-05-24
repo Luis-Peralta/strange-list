@@ -84,4 +84,16 @@ public class UserActions extends ScenarioActor {
         assertTrue(createItem.obtain_description_item(description) != description);
     }
 
+    //TC-04 - Check max long in description
+    @Step("#actor validates description length")
+    public void validate_length_description(String description) {
+        assertTrue(createItem.obtain_description_item(description).length() < 300);
+    }
+
+    //TC-05 - Check if exist in the list the item with text “Creators: Matt Duffer, Ross Duffer”
+    @Step("#actor validates description exist")
+    public void validate_exist_description(String description) {
+        assertEquals(createItem.obtain_description_item(description), description);
+    }
+
 }

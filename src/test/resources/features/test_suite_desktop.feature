@@ -7,7 +7,7 @@ Feature: As a user I want to validate the main functionalities of the website.
 
   ###TEST-CASES###
   @TC-01
-  @createanddelete
+    @createanddelete
   Scenario Outline: Create an item
     Given <User> upload an image on the choose file button
     When <User> write a <description>
@@ -29,7 +29,7 @@ Feature: As a user I want to validate the main functionalities of the website.
       | Luis | Mike plays the guitar | Mike is playing the piano now... |
 
   @TC-03
-  @createanddelete
+    @createanddelete
   Scenario Outline: Delete the item created
     Given <User> identify your item created with <description> and click on the button delete
     When <User> validate delete in modal
@@ -42,15 +42,15 @@ Feature: As a user I want to validate the main functionalities of the website.
   @TC-04
   Scenario Outline: Check max long in description
     Given <User> select random item
-    Then <User> check the length of the item correctly
+    Then <User> check the length of <description> of the item correctly
     Examples:
-      | User |
-      | Luis |
+      | User | description                     |
+      | Luis | Love is in the (mysterious) air |
 
   @TC-05
   Scenario Outline: Check if exist in the list the item with text “Creators: Matt Duffer, Ross Duffer”
     Given <User> search the item
-    Then <User> verify that the description is correct
+    Then <User> verify that the <description> is correct
     Examples:
-      | User |
-      | Luis |
+      | User | description                        |
+      | Luis | Creators: Matt Duffer, Ross Duffer |
