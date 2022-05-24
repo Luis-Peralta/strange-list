@@ -28,7 +28,7 @@ The command provided above will produce a Serenity test report in the `target/si
 ## 🗂 Folder Testing QA
 - In this folder you can see the all documentation about manual testing like test plan, test cases and evidence with each test executed and if these pass or not.
 
-##🗂 Folder and package test / java / com.strangelist
+## 🗂 Folder and package test / java / com.strangelist
 ### runner
 - to run test cases
 ### steps
@@ -40,7 +40,7 @@ The command provided above will produce a Serenity test report in the `target/si
 ### userinterface
 - elements of the website with its locators.
 
-##🗂 Folder resources
+## 🗂 Folder resources
 ### features - Test suite
 - In the folder features you can search the test suite where are the 5 test-cases written in gherkin language.
 ### images
@@ -50,7 +50,7 @@ The command provided above will produce a Serenity test report in the `target/si
 ### serenity.config
 - file to set some options like chrome, environments, etc
 
-##🗂 Folder target
+## 🗂 Folder target
 - This folder is generated when we run the command 'mvn clean verify' and it generates reports in html format and saves these files in this folder
 
 ## 🗂 Dockerfile and docker-compose 
