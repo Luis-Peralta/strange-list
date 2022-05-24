@@ -1,6 +1,6 @@
 ### README PLEASE
 # Serenity Strange list - project - testing QA
-##Hi there! 😄
+## Hi there! 😄
 
 Link to see the tracking step by step of exercise.
 https://dashboard-example.notion.site/Exercise-Stranger-List-d6246446102f4a10b1a8c57411d1bed5
@@ -24,7 +24,7 @@ Open a command window and run:
 
 The command provided above will produce a Serenity test report in the `target/site/serenity` directory. ¡Go take a look!.
 
-#Understanding the project...🤓
+# Understanding the project...🤓
 ## 🗂 Folder Testing QA
 - In this folder you can see the all documentation about manual testing like test plan, test cases and evidence with each test executed and if these pass or not.
 
