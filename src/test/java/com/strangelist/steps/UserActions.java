@@ -1,6 +1,8 @@
 package com.strangelist.steps;
 
 import com.strangelist.tasks.CreateItem;
+import com.strangelist.tasks.DeleteItem;
+import com.strangelist.tasks.EditItem;
 import com.strangelist.userinterface.MainPage;
 import net.serenitybdd.core.steps.ScenarioActor;
 import net.serenitybdd.screenplay.Actor;
@@ -14,6 +16,8 @@ public class UserActions extends ScenarioActor {
 
     MainPage mainPage;
     CreateItem createItem;
+    EditItem editItem;
+    DeleteItem deleteItem;
 
     private Actor actor;
 
@@ -31,7 +35,7 @@ public class UserActions extends ScenarioActor {
         assertEquals("Item Details", createItem.validate_title());
         createItem.upload_image();
     }
-
+    //TC-01 - Create an item
     @Step("#actor write a description")
     public void write_description(String description) {
         createItem.write_description(description);
@@ -47,4 +51,37 @@ public class UserActions extends ScenarioActor {
         assertEquals(createItem.obtain_description_item(description), description);
         assertThat(createItem.obtain_path_image(description), containsString(image));
     }
+
+    //TC-02 - Edit another existing item
+    @Step("#actor click on the button edit on a random item")
+    public void click_button_edit(String description) {
+        editItem.button_edit(description);
+    }
+
+    @Step("#actor click on the button update")
+    public void click_button_update() {
+        editItem.button_update();
+    }
+
+    @Step("#actor validates description of item")
+    public void validate_description(String description) {
+        assertEquals(createItem.obtain_description_item(description), description);
+    }
+
+    //TC-03 - Delete the item created
+    @Step("#actor clicks on the delete item")
+    public void click_on_delete_item(String description) {
+        deleteItem.button_delete(description);
+    }
+
+    @Step("#actor confirm delete item in modal")
+    public void click_button_delete_modal() {
+        deleteItem.button_delete_modal_confirm();
+    }
+
+    @Step("#actor validates description doesn't exist")
+    public void validate_not_description(String description) {
+        assertTrue(createItem.obtain_description_item(description) != description);
+    }
+
 }

@@ -9,13 +9,9 @@ services:
       - "5900:5900"
 
   app:
-    image: strange-list:1.4
-    depends_on:
-      - selenium-remote
+    image: strange:1.0
     volumes:
       - m2-repo:/home/.m2/repository
-    command:
-      - "mvn validate"
 
 volumes:
   m2-repo:

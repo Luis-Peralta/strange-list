@@ -20,4 +20,10 @@ public class MainPage extends PageObject {
     @FindBy(xpath = "//button[contains(.,'Create Item')]")
     protected WebElementFacade buttonCreate;
 
+    @FindBy(xpath = "//button[contains(.,'Update Item')]")
+    protected WebElementFacade buttonUpdate;
+
+    @FindBy(xpath = "//button[contains(.,'Yes, delete it!')]")
+    protected WebElementFacade buttonDeleteModal;
+
 }
