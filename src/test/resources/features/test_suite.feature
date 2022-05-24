@@ -1,4 +1,4 @@
-@test-suite-desktop
+@test-suite
 Feature: As a user I want to validate the main functionalities of the website.
 
   #pre-condition

@@ -6,4 +6,5 @@ public interface IElementsToMatch {
     String pathImageItem = "//p[contains(@class,'story') and contains(text(),'{0}')]/../../../figure/img";
     String editItemButton = "//p[contains(.,'{0}')]/../../div/button[1]";
     String deleteItemButton = "//p[contains(.,'{0}')]/../../div/button[2]";
+
 }
