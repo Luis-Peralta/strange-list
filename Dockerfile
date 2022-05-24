@@ -3,9 +3,11 @@ MAINTAINER Luis Peralta (luis_peralta_000@hotmail.com)
 
 WORKDIR /app
 
-COPY . .
+COPY pom.xml .
 
 RUN mvn install
 
-VOLUME maven-repo:/root/.m2
+COPY . .
+
+VOLUME /root/.m2/repository
 

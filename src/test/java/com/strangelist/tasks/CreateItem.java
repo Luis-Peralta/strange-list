@@ -18,7 +18,7 @@ public class CreateItem extends MainPage implements IImagesUpload, IElementsToMa
      * This method is to upload an image with input element.
      */
     public void upload_image() {
-        chooseFile.sendKeys(localDir + IMAGE_DOCKER);
+        chooseFile.sendKeys("localDir + IMAGE_DOCKER");
     }
 
     /***
