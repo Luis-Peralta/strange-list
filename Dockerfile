@@ -10,4 +10,3 @@ RUN mvn install
 COPY . .
 
 VOLUME /root/.m2/repository
-
